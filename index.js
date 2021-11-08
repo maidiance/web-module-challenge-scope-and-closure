@@ -165,15 +165,17 @@ function scoreboard(getInningScoreCb, inningCb, innings) {
     array.push(`Inning ${i}: Away ${inningScore.Away} - Home ${inningScore.Home}`);
     
     if(i === innings -1 && totalHome === totalAway){
+      console.log("Tie game.")
       array.push(`This game will require extra innings: Away ${totalAway} - Home ${totalHome}`)
     } else {
+      console.log("Not a tie game.")
       array.push(`Final Score: Away ${totalAway} - Home ${totalHome}`);
     }
   }
   return array;
 }
 
-
+console.log(scoreboard(getInningScore, inning, 9));
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
